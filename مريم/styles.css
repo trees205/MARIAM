@@ -1,45 +1,61 @@
 body {
-    background-color: #ffd6e7;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
- }
- 
- h1 {
-    color: #333;
-    margin-bottom: 20px;
- }
- 
- hr {
-    width: 80%;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
- }
- 
- .link-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
- 
- .link-button {
-    background-color: #f06292;
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    margin: 10px 0;
-    border-radius: 25px;
-    width: 200px;
-    text-align: center;
-    font-size: 18px;
-    transition: background-color 0.3s;
- }
- 
- .link-button:hover {
-    background-color: #e91e63;
- }
- 
+   background-color: #ffd6e7;
+   font-family: Arial, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   min-height: 100vh;
+   margin: 0;
+   padding: 20px;
+}
+
+h1 {
+   color: #333;
+   margin-bottom: 20px;
+   font-size: 2em; /* حجم خط مرن */
+}
+
+hr {
+   width: 80%;
+   border: 1px solid #ccc;
+   margin-bottom: 20px;
+}
+
+.link-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   max-width: 500px; /* تحديد أقصى عرض */
+}
+
+.link-button {
+   background-color: #f06292;
+   color: white;
+   text-decoration: none;
+   padding: 15px 30px;
+   margin: 10px 0;
+   border-radius: 25px;
+   width: 100%;
+   text-align: center;
+   font-size: 1.2em; /* حجم خط مرن */
+   transition: background-color 0.3s;
+   box-sizing: border-box; /* ضمان أن الحواف والحوامل لا تزيد من عرض الزر */
+}
+
+.link-button:hover {
+   background-color: #e91e63;
+}
+
+/* الوسائط الاستعلامية لجعل التصميم متجاوبًا */
+@media (max-width: 600px) {
+   .link-button {
+      font-size: 1em;
+      padding: 10px 20px;
+   }
+   
+   h1 {
+      font-size: 1.5em;
+   }
+}
